@@ -1,0 +1,693 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<title>Git: An Introduction</title>
+<meta name="generator" content="S5" />
+<meta name="version" content="S5 1.2a2" />
+<meta name="author" content="Eric A. Meyer" />
+<meta name="company" content="Web Architects" />
+<!-- configuration parameters -->
+<meta name="defaultView" content="slideshow" />
+<meta name="controlVis" content="hidden" />
+<!-- style sheet links -->
+<link rel="stylesheet" href="ui/default/slides.css" type="text/css" media="projection" id="slideProj" />
+<link rel="stylesheet" href="ui/default/outline.css" type="text/css" media="screen" id="outlineStyle" />
+<link rel="stylesheet" href="ui/default/print.css" type="text/css" media="print" id="slidePrint" />
+<link rel="stylesheet" href="ui/default/opera.css" type="text/css" media="projection" id="operaFix" />
+<!-- embedded styles -->
+<style type="text/css" media="all">
+.imgcon {width: 525px; margin: 0 auto; padding: 0; text-align: center;}
+#anim {width: 270px; height: 320px; position: relative; margin-top: 0.5em;}
+#anim img {position: absolute; top: 42px; left: 24px;}
+img#me01 {top: 0; left: 0;}
+img#me02 {left: 23px;}
+img#me04 {top: 44px;}
+img#me05 {top: 43px;left: 36px;}
+</style>
+<!-- S5 JS -->
+<script src="ui/default/slides.js" type="text/javascript"></script>
+</head>
+<body>
+
+<div class="layout">
+<div id="controls"><!-- DO NOT EDIT --></div>
+<div id="currentSlide"><!-- DO NOT EDIT --></div>
+<div id="header"></div>
+<div id="footer">
+	<h1>Git Introduction</h1>
+	<h2>South FL PHP Group &#8226; Oct 12, 2011</h2>
+</div>
+</div>
+
+<ol class="git presentation">
+
+<li class="slide">
+<h1>Git Introduction</h1>
+<h3>Mike Ward</h3>
+<h4><a href="http://mikeward.tel/" rel="external">MikeWard.tel</a></h4>
+<div class="handout"></div>
+</li>
+
+
+<li class="slide">
+<h1>My Comments</h1>
+<ul>
+<li>aiming for the middle 80%</li>
+<li class="incremental">first half is how it works</li>
+<li class="incremental">second half is demo</li>
+<li class="incremental"></li>
+</ul>
+</li>
+
+<li class="slide">
+<h1>What Is Source Control Management?</h1>
+<ul>
+<li class="incremental">save snapshots of your project</li>
+<li class="incremental">collaborate on software projects</li>
+<li class="incremental"></li>
+<li class="incremental"></li>
+<li class="incremental"></li>
+</ul>
+</li>
+
+
+<li class="slide">
+<h1>Why Version Control?</h1>
+<div style="margin: 100px 350px; font-size: 2.5em;">duh!</div>
+</li>
+
+<li class="slide">
+<h1>Why SCM?</h1>
+<ul>
+<li class="incremental">accidents can be fixed</li>
+<li class="incremental">allow people to work on same files</li>
+<li class="incremental">never again need to see index.php~</li>
+</ul>
+</li>
+
+<li class="slide">
+<h1>some title</h1>
+<ul>
+<li class="incremental"></li>
+<li class="incremental"></li>
+<li class="incremental"></li>
+<li class="incremental"></li>
+</ul>
+</li>
+
+<li class="slide">
+<h1>SCM from 20,000 Feet</h1>
+<ul>
+<li class="incremental">2 basic flavors: centralized, distributed</li>
+<li class="incremental">diff-based versus tree-based</li>
+<li class="incremental"></li>
+<li class="incremental"></li>
+</ul>
+</li>
+
+<li class="slide">
+<h1>You don't need to be an expert!</h1>
+<ul>
+<li class="incremental"></li>
+<li class="incremental"></li>
+<li class="incremental"></li>
+<li class="incremental"></li>
+</ul>
+</li>
+
+<li class="slide">
+<h1>Centralized Systems</h1>
+<ul>
+<li class="incremental"></li>
+<li class="incremental"></li>
+<li class="incremental"></li>
+<li class="incremental"></li>
+</ul>
+</li>
+
+<li class="slide">
+<h1>Distributed Systems</h1>
+<ul>
+<li class="incremental"></li>
+<li class="incremental"></li>
+<li class="incremental"></li>
+<li class="incremental"></li>
+</ul>
+</li>
+
+<li class="slide">
+<h1>some title</h1>
+<ul>
+<li class="incremental"></li>
+<li class="incremental"></li>
+<li class="incremental"></li>
+<li class="incremental"></li>
+</ul>
+</li>
+
+<li class="slide">
+<h1>Subversion and Friends</h1>
+<ul>
+<li class="incremental"></li>
+<li class="incremental"></li>
+<li class="incremental"></li>
+<li class="incremental"></li>
+</ul>
+</li>
+
+<li class="slide">
+<h1>some title</h1>
+<ul>
+<li class="incremental"></li>
+<li class="incremental"></li>
+<li class="incremental"></li>
+<li class="incremental"></li>
+</ul>
+</li>
+
+<li class="slide">
+<h1>Git and Friends</h1>
+<ul>
+<li class="incremental"></li>
+<li class="incremental"></li>
+<li class="incremental"></li>
+<li class="incremental"></li>
+</ul>
+</li>
+
+<li class="slide">
+<h1>some title</h1>
+<ul>
+<li class="incremental"></li>
+<li class="incremental"></li>
+<li class="incremental"></li>
+<li class="incremental"></li>
+</ul>
+</li>
+
+<li class="slide">
+<h1>Concept: Three Buckets</h1>
+<ul>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+</ul>
+</li>
+
+<li class="slide">
+<h1>some title</h1>
+<ul>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+</ul>
+</li>
+
+<li class="slide">
+<h1>Git Started: Installation</h1>
+<ul>
+<li>git.or.cz</li>
+<li></li>
+<li></li>
+<li></li>
+</ul>
+</li>
+
+<li class="slide">
+<h1>some title</h1>
+<ul>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+</ul>
+</li>
+
+<li class="slide">
+<h1>Basic Commands</h1>
+<ul>
+<li>about 150 commands</li>
+<li>most used internally, by other commands</li>
+<li>a few dozen used by humans</li>
+<li></li>
+</ul>
+</li>
+
+<li class="slide">
+<h1>.git directory</h1>
+<ul>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+</ul>
+</li>
+
+<li class="slide">
+<h1>some title</h1>
+<ul>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+</ul>
+</li>
+
+<li class="slide">
+<h1>Git Started: git clone</h1>
+<ul>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+</ul>
+</li>
+
+<li class="slide">
+<h1>some title</h1>
+<ul>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+</ul>
+</li>
+
+<li class="slide">
+<h1>Git Started: git init</h1>
+<ul>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+</ul>
+</li>
+
+<li class="slide">
+<h1>Git Started: add files</h1>
+<ul>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+</ul>
+</li>
+
+<li class="slide">
+<h1>some title</h1>
+<ul>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+</ul>
+</li>
+
+<li class="slide">
+<h1>Git Started: commit</h1>
+<ul>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+</ul>
+</li>
+
+<li class="slide">
+<h1>Collaboration in Subversion</h1>
+<ul>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+</ul>
+</li>
+
+<li class="slide">
+<h1>some title</h1>
+<ul>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+</ul>
+</li>
+
+<li class="slide">
+<h1>Collaboration in Git/Mercurial</h1>
+<ul>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+</ul>
+</li>
+
+<li class="slide">
+<h1>some title</h1>
+<ul>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+</ul>
+</li>
+
+<li class="slide">
+<h1>Git Commands: git push</h1>
+<ul>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+</ul>
+</li>
+
+<li class="slide">
+<h1>Git Commands: git log</h1>
+<ul>
+<li>git log -4</li>
+<li>git log --since=yesterday</li>
+<li>git log --pretty=full</li>
+<li>git log --oneline --graph --decorate --all</li>
+</ul>
+</li>
+
+<li class="slide">
+<h1>some title</h1>
+<ul>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+</ul>
+</li>
+
+<li class="slide">
+<h1>Git Commands: git branch</h1>
+<ul>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+</ul>
+</li>
+
+<li class="slide">
+<h1>some title</h1>
+<ul>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+</ul>
+</li>
+
+<li class="slide">
+<h1>Git Commands: git checkout</h1>
+<ul>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+</ul>
+</li>
+
+<li class="slide">
+<h1>some title</h1>
+<ul>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+</ul>
+</li>
+
+<li class="slide">
+<h1>Git Commands: git merge</h1>
+<ul>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+</ul>
+</li>
+
+<li class="slide">
+<h1>some title</h1>
+<ul>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+</ul>
+</li>
+
+<li class="slide">
+<h1>Git Basics: .gitignore</h1>
+<ul>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+</ul>
+</li>
+
+<li class="slide">
+<h1>Git Commands: git fetch</h1>
+<ul>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+</ul>
+</li>
+
+<li class="slide">
+<h1>Git Commands: git pull</h1>
+<ul>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+</ul>
+</li>
+
+<li class="slide">
+<h1>Git Commands: git stash</h1>
+<ul>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+</ul>
+</li>
+
+<li class="slide">
+<h1>Git Commands: git ls-files</h1>
+<ul>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+</ul>
+</li>
+
+<li class="slide">
+<h1>Git Commands: git show</h1>
+<ul>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+</ul>
+</li>
+
+<li class="slide">
+<h1>gitk</h1>
+<ul>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+</ul>
+</li>
+
+<li class="slide">
+<h1>git instaweb</h1>
+<div style="margin-top:15px; margin-bottom:24px; text-align:center;">git instaweb --httpd=#{server_name}</div>
+<div align="center"><img src="img/instaweb-options.png"></div>
+</li>
+
+<li class="slide">
+<h1>Git Commands: git reset</h1>
+<ul>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+</ul>
+</li>
+
+<li class="slide">
+<h1>Git Commands: git rebase</h1>
+<ul>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+</ul>
+</li>
+
+<li class="slide">
+<h1>Git Commands: git gc</h1>
+<ul>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+</ul>
+</li>
+
+<li class="slide">
+<h1>Git Commands: git diff</h1>
+<ul>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+</ul>
+</li>
+
+<li class="slide">
+<h1>Git Tips: working on branches</h1>
+<ul>
+<li>create branch</li>
+<li>checkout branch (can do both together)</li>
+<li>make changes, save file</li>
+<li>diff or view in browser to see changes</li>
+<li>add, commit on that branch
+<li>merge, rebase or discard
+</ul>
+</li>
+
+<!-- 
+demo: 
+create branch
+switch to new branch
+edit file to change something obvious
+git diff and reload page in browser
+git add, commit
+change back to master
+reload in browser
+git merge
+reload
+-->
+
+<li class="slide">
+<h1>Git Tips: git add -i</h1>
+<ul>
+<li>choose modified files to stage</li>
+<li>choose untracked files to stage</li>
+<li>choose chunks of code to stage</li>
+<li></li>
+</ul>
+</li>
+
+<li class="slide">
+<h1>Git Tips: tracking branches</h1>
+<ul>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+</ul>
+</li>
+
+<li class="slide">
+<h1>deploying with git</h1>
+<ul>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+</ul>
+</li>
+
+<li class="slide">
+<h1>Git Tips: git GUIs</h1>
+<ul>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+</ul>
+</li>
+
+<li class="slide">
+<h1>resources</h1>
+<ul>
+<li>git.or.cz</li>
+<li>git-scm.org</li>
+<li>http://blip.tv/scott-chacon/</li>
+<li>#git , #github</li>
+<li>gitref.org</li>
+</ul>
+</li>
+
+<li class="slide">
+<h1>some title</h1>
+<ul>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+</ul>
+</li>
+
+
+<li class="slide">
+<h1>S5 Themes</h1>
+<p class="imgcon">
+<img src="pix/S501.jpg" alt="" title="Default" />
+<img src="pix/S502.jpg" alt="" title="I18N" />
+<img src="pix/S503.jpg" alt="" title="Blue" />
+<img src="pix/S504.jpg" alt="" title="Flower" />
+(one way of presenting multiple graphics)
+</p>
+</li>
+
+
+<li class="slide">
+<h1>Incremental S5 Themes</h1>
+<p class="imgcon">
+<img src="pix/S501.jpg" alt="" title="Default" class="incremental" />
+<img src="pix/S502.jpg" alt="" title="I18N" class="incremental" />
+<img src="pix/S503.jpg" alt="" title="Blue" class="incremental" />
+<img src="pix/S504.jpg" alt="" title="Flower" class="incremental" />
+(one by one!)
+</p>
+</li>
+
+
+<li class="slide">
+<h1>Incremental Animation</h1>
+<ul>
+<li>A demonstration of just one of the many ways to accomplish simple animation-like effects <small>(using a diagram from <a href="http://gmpg.org/xfn/and/" rel="external">"XFN and..."</a>)</small></li>
+</ul>
+<p class="imgcon" id="anim">
+<img src="pix/mememe01.png" id="me01" alt="" />
+<img src="pix/mememe02.png" alt="" id="me02" class="incremental" />
+<img src="pix/mememe03.png" alt="" id="me03" class="incremental" />
+<img src="pix/mememe04.png" alt="" id="me04" class="incremental" />
+<img src="pix/mememe05.png" alt="" id="me05" class="incremental" />
+</p>
+</li>
+
+
+</ol>
+</body>
+</html>
