@@ -1,0 +1,6 @@
+.DS_Store
+Capfile
+config
+.sass-cache
+.hgstatus
+
