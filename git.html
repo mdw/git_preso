@@ -24,6 +24,7 @@ img#me01 {top: 0; left: 0;}
 img#me02 {left: 23px;}
 img#me04 {top: 44px;}
 img#me05 {top: 43px;left: 36px;}
+.red { color:#f22; }
 </style>
 <!-- S5 JS -->
 <script src="ui/default/slides.js" type="text/javascript"></script>
@@ -109,9 +110,9 @@ img#me05 {top: 43px;left: 36px;}
 <li class="slide">
 <h1>You don't need to be an expert!</h1>
 <ul>
-<li class="incremental"></li>
-<li class="incremental"></li>
-<li class="incremental"></li>
+<li class="incremental">only use need a dozen commands to start</li>
+<li class="incremental">never need to know internals</li>
+<li class="incremental">branching/merging is easy</li>
 <li class="incremental"></li>
 </ul>
 </li>
@@ -326,44 +327,40 @@ img#me05 {top: 43px;left: 36px;}
 </ul>
 </li>
 
+
+<!--  git remote add -->
 <li class="slide">
-<h1>some title</h1>
-<ul>
-<li></li>
-<li></li>
-<li></li>
-<li></li>
-</ul>
+<h1>Git Commands: git remote</h1>
+<h2 align="center"><span class="red">remote add</span> #{nickname} #{url}</h2><br>
+<div align="center"><img src="img/remote-add.png"></div>
+</li>
+<li class="slide">
+<h1>Git Commands: git remote</h1>
+<h2 align="center">remote add <span class="red">#{nickname}</span> #{url}</h2><br>
+<div align="center"><img src="img/remote-add2.png"></div>
+</li>
+<li class="slide">
+<h1>Git Commands: git remote</h1>
+<h2 align="center">remote add #{nickname} <span class="red">#{url}</span></h2><br>
+<div align="center"><img src="img/remote-add3.png"></div>
 </li>
 
-<li class="slide">
-<h1>Collaboration in Git/Mercurial</h1>
-<ul>
-<li></li>
-<li></li>
-<li></li>
-<li></li>
-</ul>
-</li>
 
-<li class="slide">
-<h1>some title</h1>
-<ul>
-<li></li>
-<li></li>
-<li></li>
-<li></li>
-</ul>
-</li>
-
+<!--  git push  -->
 <li class="slide">
 <h1>Git Commands: git push</h1>
-<ul>
-<li></li>
-<li></li>
-<li></li>
-<li></li>
-</ul>
+<h2 align="center"><span class="red">git push</span> #{destination} #{branch}</h2><br>
+<div align="center"><img src="img/git-push.png"></div>
+</li>
+<li class="slide">
+<h1>Git Commands: git push</h1>
+<h2 align="center">git push <span class="red">#{destination}</span> #{branch}</h2><br>
+<div align="center"><img src="img/git-push2.png"></div>
+</li>
+<li class="slide">
+<h1>Git Commands: git push</h1>
+<h2 align="center">git push #{destination} <span class="red">#{branch}</span></h2><br>
+<div align="center"><img src="img/git-push3.png"></div>
 </li>
 
 <li class="slide">
@@ -469,9 +466,7 @@ img#me05 {top: 43px;left: 36px;}
 <li class="slide">
 <h1>Git Commands: git pull</h1>
 <ul>
-<li></li>
-<li></li>
-<li></li>
+<li>fetch + merge</li>
 <li></li>
 </ul>
 </li>
@@ -544,12 +539,7 @@ img#me05 {top: 43px;left: 36px;}
 
 <li class="slide">
 <h1>Git Commands: git gc</h1>
-<ul>
-<li></li>
-<li></li>
-<li></li>
-<li></li>
-</ul>
+<div align="center" style="margin-top:10px;"><img src="img/git-gc.png"></div>
 </li>
 
 <li class="slide">
@@ -598,6 +588,16 @@ reload
 </li>
 
 <li class="slide">
+<h1>Collaboration in Git</h1>
+<ul>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+</ul>
+</li>
+
+<li class="slide">
 <h1>Git Tips: tracking branches</h1>
 <ul>
 <li></li>
@@ -605,6 +605,24 @@ reload
 <li></li>
 <li></li>
 </ul>
+</li>
+
+<li class="slide">
+<h1>Git Commands Revisited</h1>
+<table cellpadding="0" width="96%">
+<tr>
+	<th width="33%" align="left"><u>local commands</u></th>
+	<th width="34%" align="left"><u>branch/merge</u></th>
+	<th align="left"><u>remote commands</u></th>
+</tr>
+<tr>
+	<td>git init<br>git add<br>git status<br>git commit<br>git log
+	  <br>git branch<br>git diff<br>git tag<br>git show
+	</td>
+	<td valign="top">git branch<br>git merge<br>git checkout<br>git rebase<br>git stash</td>
+	<td valign="top">git remote<br>git clone<br>git fetch<br>git pull<br>git push</td>
+</tr>
+</table>
 </li>
 
 <li class="slide">
