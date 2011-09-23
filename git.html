@@ -18,12 +18,12 @@
 <!-- embedded styles -->
 <style type="text/css" media="all">
 .imgcon {width: 525px; margin: 0 auto; padding: 0; text-align: center;}
-#anim {width: 270px; height: 320px; position: relative; margin-top: 0.5em;}
-#anim img {position: absolute; top: 42px; left: 24px;}
-img#me01 {top: 0; left: 0;}
-img#me02 {left: 23px;}
-img#me04 {top: 44px;}
-img#me05 {top: 43px;left: 36px;}
+#anim { }
+/* #anim img {position: absolute; top: 42px; left: 24px;} */
+img#me01 {}
+img#me02 {}
+img#me04 {}
+img#me05 {}
 .red { color:#f22; }
 </style>
 <!-- S5 JS -->
@@ -51,12 +51,13 @@ img#me05 {top: 43px;left: 36px;}
 </li>
 
 
+
 <li class="slide">
 <h1>My Comments</h1>
 <ul>
 <li>aiming for the middle 80%</li>
-<li class="incremental">first half is how it works</li>
-<li class="incremental">second half is demo</li>
+<li class="incremental">how it works</li>
+<li class="incremental">live demo</li>
 <li class="incremental"></li>
 </ul>
 </li>
@@ -64,11 +65,7 @@ img#me05 {top: 43px;left: 36px;}
 <li class="slide">
 <h1>What Is Source Control Management?</h1>
 <ul>
-<li class="incremental">save snapshots of your project</li>
-<li class="incremental">collaborate on software projects</li>
-<li class="incremental"></li>
-<li class="incremental"></li>
-<li class="incremental"></li>
+<h2 align="center" style="margin-top:100px;">save snapshots of your project</h2>
 </ul>
 </li>
 
@@ -82,28 +79,8 @@ img#me05 {top: 43px;left: 36px;}
 <h1>Why SCM?</h1>
 <ul>
 <li class="incremental">accidents can be fixed</li>
-<li class="incremental">allow people to work on same files</li>
+<li class="incremental">collaborate: people can work on same files</li>
 <li class="incremental">never again need to see index.php~</li>
-</ul>
-</li>
-
-<li class="slide">
-<h1>some title</h1>
-<ul>
-<li class="incremental"></li>
-<li class="incremental"></li>
-<li class="incremental"></li>
-<li class="incremental"></li>
-</ul>
-</li>
-
-<li class="slide">
-<h1>SCM from 20,000 Feet</h1>
-<ul>
-<li class="incremental">2 basic flavors: centralized, distributed</li>
-<li class="incremental">diff-based versus tree-based</li>
-<li class="incremental"></li>
-<li class="incremental"></li>
 </ul>
 </li>
 
@@ -115,6 +92,13 @@ img#me05 {top: 43px;left: 36px;}
 <li class="incremental">branching/merging is easy</li>
 <li class="incremental"></li>
 </ul>
+</li>
+
+<li class="slide">
+<h1>SCM Types</h1>
+<div align="center">
+	<img src="img/SCM-taxonomy.png"/>
+</div>
 </li>
 
 <li class="slide">
@@ -158,16 +142,6 @@ img#me05 {top: 43px;left: 36px;}
 </li>
 
 <li class="slide">
-<h1>some title</h1>
-<ul>
-<li class="incremental"></li>
-<li class="incremental"></li>
-<li class="incremental"></li>
-<li class="incremental"></li>
-</ul>
-</li>
-
-<li class="slide">
 <h1>Git and Friends</h1>
 <ul>
 <li class="incremental"></li>
@@ -178,53 +152,31 @@ img#me05 {top: 43px;left: 36px;}
 </li>
 
 <li class="slide">
-<h1>some title</h1>
-<ul>
-<li class="incremental"></li>
-<li class="incremental"></li>
-<li class="incremental"></li>
-<li class="incremental"></li>
-</ul>
-</li>
-
-<li class="slide">
 <h1>Concept: Three Buckets</h1>
-<ul>
-<li></li>
-<li></li>
-<li></li>
-<li></li>
-</ul>
+<div align="center">
+	<img src="img/three-buckets.png">
+</div>
 </li>
 
 <li class="slide">
-<h1>some title</h1>
-<ul>
-<li></li>
-<li></li>
-<li></li>
-<li></li>
-</ul>
+<h1>Git Started</h1>
+<h2 align="center" style="margin-top:200px">Git Started</h2>
 </li>
 
 <li class="slide">
 <h1>Git Started: Installation</h1>
 <ul>
-<li>git.or.cz</li>
-<li></li>
-<li></li>
-<li></li>
+<li>can download source: git.or.cz</li>
+<li>port install git-core +svn</li>
+<li>yum install git-core</li>
+<li>apt-get install git-core</li>
 </ul>
 </li>
 
 <li class="slide">
-<h1>some title</h1>
-<ul>
-<li></li>
-<li></li>
-<li></li>
-<li></li>
-</ul>
+<h1>Git Setup</h1>
+<h2 style="margin-top:40px;">git config --global user.name "mike ward"</h2>
+<h2 style="margin-top:40px;">git config --global user.email "mike@bocanames.com"</h2>
 </li>
 
 <li class="slide">
@@ -235,6 +187,12 @@ img#me05 {top: 43px;left: 36px;}
 <li>a few dozen used by humans</li>
 <li></li>
 </ul>
+</li>
+
+<li class="slide">
+<h1>Git Started: git init</h1>
+<h2 align="center">git init - creates a new repository</h2>
+<div align="center"><img src="img/git-init.png"></div>
 </li>
 
 <li class="slide">
@@ -259,26 +217,6 @@ img#me05 {top: 43px;left: 36px;}
 
 <li class="slide">
 <h1>Git Started: git clone</h1>
-<ul>
-<li></li>
-<li></li>
-<li></li>
-<li></li>
-</ul>
-</li>
-
-<li class="slide">
-<h1>some title</h1>
-<ul>
-<li></li>
-<li></li>
-<li></li>
-<li></li>
-</ul>
-</li>
-
-<li class="slide">
-<h1>Git Started: git init</h1>
 <ul>
 <li></li>
 <li></li>
@@ -363,25 +301,73 @@ img#me05 {top: 43px;left: 36px;}
 <div align="center"><img src="img/git-push3.png"></div>
 </li>
 
+
 <li class="slide">
 <h1>Git Commands: git log</h1>
+<h2 align="center" style="margin-top:200px;">git log</h2>
+</li>
+
+<li class="slide">
+<h1>Git Commands: git log</h1>
+<h2 align="center">git log -3</h2>
+<div align="center"><img src="img/git-log-1.png" alt="" />
+</li>
+
+<li class="slide">
+<h1>Git Commands: git log</h1>
+<h2 align="center">git log -3</h2>
+<div align="center"><img src="img/git-log-1a.png" alt="" />
+</li>
+
+<li class="slide">
+<h1>Git Commands: git log</h1>
+<h2 align="center">git log -3</h2>
+<div align="center"><img src="img/git-log-1b.png" alt="" />
+</li>
+
+<li class="slide">
+<h1>Git Commands: git log</h1>
+<h2 align="center">git log -3</h2>
+<div align="center"><img src="img/git-log-1c.png" alt="" />
+</li>
+
+<li class="slide">
+<h1>Git Commands: git log</h1>
+<h2 align="center">git log -3</h2>
+<div align="center"><img src="img/git-log-1d.png" alt="" />
+</li>
+
+<li class="slide">
+<h1>Git Commands: git log</h1>
+<h2 align="center">git log -3</h2>
+<div align="center"><img src="img/git-log-1e.png" alt="" />
+</li>
+
+
+<li class="slide">
+<h1>Git Commands: git log</h1>
+<h2 align="center">git log --since=yesterday</h2>
 <ul>
-<li>git log -4</li>
-<li>git log --since=yesterday</li>
-<li>git log --pretty=full</li>
-<li>git log --oneline --graph --decorate --all</li>
+</ul>
+</li>
+
+
+<li class="slide">
+<h1>Git Commands: git log</h1>
+<h2 align="center">git log --pretty=oneline</h2>
+<ul>
+<li></li>
 </ul>
 </li>
 
 <li class="slide">
-<h1>some title</h1>
+<h1>Git Commands: git log</h1>
+<h2 align="center">git log --oneline --graph --decorate --all</h2>
 <ul>
-<li></li>
-<li></li>
-<li></li>
 <li></li>
 </ul>
 </li>
+
 
 <li class="slide">
 <h1>Git Commands: git branch</h1>

@@ -32,6 +32,7 @@ sup {font-size: smaller; line-height: 1px;}
 .slide ul ul {line-height: 1;}
 .slide ul ul li {margin: .2em; font-size: 85%; list-style: square;}
 .slide img.leader {display: block; margin: 0 auto;}
+.slide h2 {font-size:1.5em; }
 
 div#header, div#footer {background: #005; color: #AAB;
   font-family: Verdana, Helvetica, sans-serif;}
