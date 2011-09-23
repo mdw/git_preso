@@ -1,6 +1,7 @@
 .DS_Store
 Capfile
 config
+design
 .sass-cache
 .hgstatus
 
