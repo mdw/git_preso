@@ -27,7 +27,6 @@ var countdown = {
 	remaining: 0
 };
 
-
 var isIE = navigator.appName == 'Microsoft Internet Explorer' && navigator.userAgent.indexOf('Opera') < 1 ? 1 : 0;
 var isOp = navigator.userAgent.indexOf('Opera') > -1 ? 1 : 0;
 var isGe = navigator.userAgent.indexOf('Gecko') > -1 && navigator.userAgent.indexOf('Safari') < 1 ? 1 : 0;
