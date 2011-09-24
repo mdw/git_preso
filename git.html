@@ -44,10 +44,12 @@ img#me05 {}
 <ol class="git presentation">
 
 <li class="slide">
+<img src="img/gitlogo.jpg" class="gitlogo" style="float:right; margin:70px 90px 0 0;">
 <h1>Git Introduction</h1>
 <h3>Mike Ward</h3>
-<h4><a href="http://mikeward.tel/" rel="external">MikeWard.tel</a></h4>
-<div class="handout"></div>
+<h4><a href="http://mikeward.tel/" rel="external">MikeWard.tel</a> </h4>
+<div class="handout">
+</div>
 </li>
 
 
@@ -81,6 +83,7 @@ img#me05 {}
 <li class="incremental">accidents can be fixed</li>
 <li class="incremental">collaborate: people can work on same files</li>
 <li class="incremental">never again need to see index.php~</li>
+<li class="incremental">be <em>professioal</em>
 </ul>
 </li>
 
@@ -89,7 +92,7 @@ img#me05 {}
 <ul>
 <li class="incremental">only use need a dozen commands to start</li>
 <li class="incremental">never need to know internals</li>
-<li class="incremental">branching/merging is easy</li>
+<li class="incremental">branching/merging is easy!</li>
 <li class="incremental"></li>
 </ul>
 </li>
@@ -104,17 +107,26 @@ img#me05 {}
 <li class="slide">
 <h1>Centralized Systems</h1>
 <ul>
-<li class="incremental"></li>
-<li class="incremental"></li>
-<li class="incremental"></li>
-<li class="incremental"></li>
+<li class="incremental">one authoritative server</li>
+<li class="incremental">one complete repository</li>
+<li class="incremental">working copies</li>
+<li class="incremental">merging problems</li>
 </ul>
 </li>
 
 <li class="slide">
 <h1>Distributed Systems</h1>
 <ul>
-<li class="incremental"></li>
+<li class="incremental">no authoritative repository</li>
+<li class="incremental">work offline</li>
+<li class="incremental">lots of choices about workflows</li>
+<li class="incremental">no worries about write permissions</li>
+</ul>
+</li>
+
+<li class="slide">
+<h1>Delta based storage</h1>
+<ul>
 <li class="incremental"></li>
 <li class="incremental"></li>
 <li class="incremental"></li>
@@ -122,34 +134,33 @@ img#me05 {}
 </li>
 
 <li class="slide">
-<h1>some title</h1>
-<ul>
-<li class="incremental"></li>
-<li class="incremental"></li>
-<li class="incremental"></li>
-<li class="incremental"></li>
-</ul>
+<h1>Directed Acyclic Graph storage</h1>
+<div align="center" style="margin-top:10px;">
+	<img src="img/connected-graph.png" />
+</div>
 </li>
 
 <li class="slide">
-<h1>Subversion and Friends</h1>
-<ul>
-<li class="incremental"></li>
-<li class="incremental"></li>
-<li class="incremental"></li>
-<li class="incremental"></li>
-</ul>
+<h1>Directed Acyclic Graph storage</h1>
+<div align="center" style="margin-top:10px;">
+	<img src="img/directed-graph.png" />
+</div>
 </li>
 
 <li class="slide">
-<h1>Git and Friends</h1>
-<ul>
-<li class="incremental"></li>
-<li class="incremental"></li>
-<li class="incremental"></li>
-<li class="incremental"></li>
-</ul>
+<h1>Directed Acyclic Graph storage</h1>
+<div align="center" style="margin-top:10px;">
+	<img src="img/acyclic-graphs.png" />
+</div>
 </li>
+
+<li class="slide">
+<h1>Directed Acyclic Graph storage</h1>
+<div align="center" style="margin-top:10px;">
+	<img src="img/dags.png" />
+</div>
+</li>
+
 
 <li class="slide">
 <h1>Concept: Three Buckets</h1>
@@ -266,25 +277,49 @@ img#me05 {}
 </li>
 
 
-<!--  git remote add -->
+<!--  git remote  -->
 <li class="slide">
 <h1>Git Commands: git remote</h1>
-<h2 align="center"><span class="red">remote add</span> #{nickname} #{url}</h2><br>
+<h2 align="center" style="margin-top:200px;">git remote</h2>
+</li>
+<li class="slide">
+<h1>Git Commands: git remote</h1>
+<h2 align="center">git <span class="red">remote add</span> #{nickname} #{url}</h2><br>
 <div align="center"><img src="img/remote-add.png"></div>
 </li>
 <li class="slide">
 <h1>Git Commands: git remote</h1>
-<h2 align="center">remote add <span class="red">#{nickname}</span> #{url}</h2><br>
+<h2 align="center">git remote add <span class="red">#{nickname}</span> #{url}</h2><br>
 <div align="center"><img src="img/remote-add2.png"></div>
 </li>
 <li class="slide">
 <h1>Git Commands: git remote</h1>
-<h2 align="center">remote add #{nickname} <span class="red">#{url}</span></h2><br>
+<h2 align="center">git remote add #{nickname} <span class="red">#{url}</span></h2><br>
 <div align="center"><img src="img/remote-add3.png"></div>
+</li>
+
+<li class="slide">
+<h1>Git Commands: git remote</h1>
+<h2 align="center">git remote</h2><br>
+<div align="center"><img src="img/remote.png"></div>
+</li>
+<li class="slide">
+<h1>Git Commands: git remote</h1>
+<h2 align="center">git remote -v</h2><br>
+<div align="center"><img src="img/remote-v.png"></div>
+</li>
+<li class="slide">
+<h1>Git Commands: git remote</h1>
+<h2 align="center">git remote show #{nickname}</h2><br>
+<div align="center"><img src="img/remote-show.png"></div>
 </li>
 
 
 <!--  git push  -->
+<li class="slide">
+<h1>Git Commands: git push</h1>
+<h2 align="center" style="margin-top:200px;">git push </h2>
+</li>
 <li class="slide">
 <h1>Git Commands: git push</h1>
 <h2 align="center"><span class="red">git push</span> #{destination} #{branch}</h2><br>
