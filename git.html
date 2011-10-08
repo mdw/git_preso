@@ -1,6 +1,5 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
-
 <head>
 <title>Git: An Introduction</title>
 <meta name="generator" content="S5" />
@@ -74,16 +73,16 @@ img#me05 {}
 
 <li class="slide">
 <h1>Why Version Control?</h1>
-<div style="margin: 100px 350px; font-size: 2.5em;">duh!</div>
+<div style="margin: 100px 400px; font-size: 2.5em;">duh!</div>
 </li>
 
 <li class="slide">
-<h1>Why SCM?</h1>
+<h1>Why VCS?</h1>
 <ul>
 <li class="incremental">accidents can be fixed</li>
 <li class="incremental">collaborate: people can work on same files</li>
 <li class="incremental">never again need to see index.php~</li>
-<li class="incremental">be <em>professioal</em>
+<li class="incremental">be <em>professional</em>
 </ul>
 </li>
 
@@ -93,12 +92,11 @@ img#me05 {}
 <li class="incremental">only use need a dozen commands to start</li>
 <li class="incremental">never need to know internals</li>
 <li class="incremental">branching/merging is easy!</li>
-<li class="incremental"></li>
 </ul>
 </li>
 
 <li class="slide">
-<h1>SCM Types</h1>
+<h1>VCS Types</h1>
 <div align="center">
 	<img src="img/SCM-taxonomy.png"/>
 </div>
@@ -110,7 +108,6 @@ img#me05 {}
 <li class="incremental">one authoritative server</li>
 <li class="incremental">one complete repository</li>
 <li class="incremental">working copies</li>
-<li class="incremental">merging problems</li>
 </ul>
 </li>
 
@@ -120,40 +117,80 @@ img#me05 {}
 <li class="incremental">no authoritative repository</li>
 <li class="incremental">work offline</li>
 <li class="incremental">lots of choices about workflows</li>
-<li class="incremental">no worries about write permissions</li>
+<li class="incremental">encourages collaboration</li>
 </ul>
 </li>
 
+
+<!-- delta storage -->
 <li class="slide">
 <h1>Delta based storage</h1>
-<ul>
-<li class="incremental"></li>
-<li class="incremental"></li>
-<li class="incremental"></li>
-</ul>
+<div align="center"><img src="img/delta-commit-1.png"></div>
+</li>
+<li class="slide">
+<h1>Delta based storage</h1>
+<div align="center"><img src="img/delta-commit-2.png"></div>
+</li>
+<li class="slide">
+<h1>Delta based storage</h1>
+<div align="center"><img src="img/delta-commit-3.png"></div>
+</li>
+<li class="slide">
+<h1>Delta based storage</h1>
+<div align="center"><img src="img/delta-commit-4.png"></div>
+</li>
+<li class="slide">
+<h1>Delta based storage</h1>
+<div align="center"><img src="img/delta-commit-5.png"></div>
 </li>
 
+
+<!-- DAG storage -->
+<li class="slide">
+<h1>DAG based storage</h1>
+<div align="center"><img src="img/dag-commit-1.png"></div>
+</li>
+<li class="slide">
+<h1>DAG based storage</h1>
+<div align="center"><img src="img/dag-commit-2.png"></div>
+</li>
+<li class="slide">
+<h1>DAG based storage</h1>
+<div align="center"><img src="img/dag-commit-3.png"></div>
+</li>
+<li class="slide">
+<h1>DAG based storage</h1>
+<div align="center"><img src="img/dag-commit-4.png"></div>
+</li>
+<li class="slide">
+<h1>DAG based storage</h1>
+<div align="center"><img src="img/dag-commit-5.png"></div>
+</li>
+<li class="slide">
+<h1>DAG based storage</h1>
+<div align="center"><img src="img/dag-based-storage.png"></div>
+</li>
+
+
+<!-- what is a DAG?  -->
 <li class="slide">
 <h1>Directed Acyclic Graph storage</h1>
 <div align="center" style="margin-top:10px;">
 	<img src="img/connected-graph.png" />
 </div>
 </li>
-
 <li class="slide">
 <h1>Directed Acyclic Graph storage</h1>
 <div align="center" style="margin-top:10px;">
 	<img src="img/directed-graph.png" />
 </div>
 </li>
-
 <li class="slide">
 <h1>Directed Acyclic Graph storage</h1>
 <div align="center" style="margin-top:10px;">
 	<img src="img/acyclic-graphs.png" />
 </div>
 </li>
-
 <li class="slide">
 <h1>Directed Acyclic Graph storage</h1>
 <div align="center" style="margin-top:10px;">
@@ -165,7 +202,7 @@ img#me05 {}
 <li class="slide">
 <h1>Concept: Three Buckets</h1>
 <div align="center">
-	<img src="img/three-buckets.png">
+	<img src="img/three-buckets.png" style="margin-top: 24px">
 </div>
 </li>
 
@@ -181,13 +218,15 @@ img#me05 {}
 <li>port install git-core +svn</li>
 <li>yum install git-core</li>
 <li>apt-get install git-core</li>
+<li>rpm install git-core</li>
 </ul>
 </li>
 
 <li class="slide">
 <h1>Git Setup</h1>
 <h2 style="margin-top:40px;">git config --global user.name "mike ward"</h2>
-<h2 style="margin-top:40px;">git config --global user.email "mike@bocanames.com"</h2>
+<h2 style="margin-top:40px;">git config --global user.email "mike@mikeward.net"</h2>
+<p style="margin-top:200px;color:#eee" align="center">cat ~/.gitconfig</p>
 </li>
 
 <li class="slide">
@@ -195,24 +234,26 @@ img#me05 {}
 <ul>
 <li>about 150 commands</li>
 <li>most used internally, by other commands</li>
-<li>a few dozen used by humans</li>
-<li></li>
+<li>about half used by humans</li>
+<li>try to gradually learn some</li>
 </ul>
 </li>
 
 <li class="slide">
 <h1>Git Started: git init</h1>
 <h2 align="center">git init - creates a new repository</h2>
-<div align="center"><img src="img/git-init.png"></div>
+<div align="center"><img src="img/init.png"></div>
 </li>
 
 <li class="slide">
 <h1>.git directory</h1>
+<img style="float:right; margin-right:30px;" src="img/git-init.png">
 <ul>
-<li></li>
-<li></li>
-<li></li>
-<li></li>
+<li>config file</li>
+<li>hooks</li>
+<li>index</li>
+<li>object database</li>
+<li>references</li>
 </ul>
 </li>
 
@@ -445,15 +486,20 @@ img#me05 {}
 </ul>
 </li>
 
+
 <li class="slide">
 <h1>Git Commands: git merge</h1>
-<ul>
-<li></li>
-<li></li>
-<li></li>
-<li></li>
-</ul>
+<div align="center"><img src="img/merge1.png"></div>
 </li>
+<li class="slide">
+<h1>Git Commands: git merge</h1>
+<div align="center"><img src="img/merge2.png"></div>
+</li>
+<li class="slide">
+<h1>Git Commands: git merge</h1>
+<div align="center"><img src="img/merge3.png"></div>
+</li>
+
 
 <li class="slide">
 <h1>some title</h1>
@@ -549,15 +595,24 @@ img#me05 {}
 </ul>
 </li>
 
+
 <li class="slide">
 <h1>Git Commands: git rebase</h1>
 <ul>
-<li></li>
-<li></li>
-<li></li>
-<li></li>
+<li>allows you to write history differently</li>
+<li class="incremental">rebase -i</li>
+<li class="incremental">"cleaner" history</li>
 </ul>
 </li>
+<li class="slide">
+<h1>Git Commands: git rebase</h1>
+<div align="center"><img src="img/rebase1.gif"/></div>
+</li>
+<li class="slide">
+<h1>Git Commands: git rebase</h1>
+<div align="center"><img src="img/rebase2.gif"/></div>
+</li>
+
 
 <li class="slide">
 <h1>Git Commands: git gc</h1>
@@ -647,12 +702,22 @@ reload
 </table>
 </li>
 
+
+
+<li class="slide">
+<h1>hosted repos for Git</h1>
+<ul>
+<li>Github</li>
+<li>unfuddle, gitorious, beanstalk, bitbucket</li>
+<li>roll your own</li>
+</ul>
+</li>
+
 <li class="slide">
 <h1>deploying with git</h1>
 <ul>
-<li></li>
-<li></li>
-<li></li>
+<li>supported by capistrano, fabric</li>
+<li>heroku</li>
 <li></li>
 </ul>
 </li>
@@ -673,58 +738,10 @@ reload
 <li>git.or.cz</li>
 <li>git-scm.org</li>
 <li>http://blip.tv/scott-chacon/</li>
+<li>http://ProGit.org/book</li>
 <li>#git , #github</li>
 <li>gitref.org</li>
 </ul>
-</li>
-
-<li class="slide">
-<h1>some title</h1>
-<ul>
-<li></li>
-<li></li>
-<li></li>
-<li></li>
-</ul>
-</li>
-
-
-<li class="slide">
-<h1>S5 Themes</h1>
-<p class="imgcon">
-<img src="pix/S501.jpg" alt="" title="Default" />
-<img src="pix/S502.jpg" alt="" title="I18N" />
-<img src="pix/S503.jpg" alt="" title="Blue" />
-<img src="pix/S504.jpg" alt="" title="Flower" />
-(one way of presenting multiple graphics)
-</p>
-</li>
-
-
-<li class="slide">
-<h1>Incremental S5 Themes</h1>
-<p class="imgcon">
-<img src="pix/S501.jpg" alt="" title="Default" class="incremental" />
-<img src="pix/S502.jpg" alt="" title="I18N" class="incremental" />
-<img src="pix/S503.jpg" alt="" title="Blue" class="incremental" />
-<img src="pix/S504.jpg" alt="" title="Flower" class="incremental" />
-(one by one!)
-</p>
-</li>
-
-
-<li class="slide">
-<h1>Incremental Animation</h1>
-<ul>
-<li>A demonstration of just one of the many ways to accomplish simple animation-like effects <small>(using a diagram from <a href="http://gmpg.org/xfn/and/" rel="external">"XFN and..."</a>)</small></li>
-</ul>
-<p class="imgcon" id="anim">
-<img src="pix/mememe01.png" id="me01" alt="" />
-<img src="pix/mememe02.png" alt="" id="me02" class="incremental" />
-<img src="pix/mememe03.png" alt="" id="me03" class="incremental" />
-<img src="pix/mememe04.png" alt="" id="me04" class="incremental" />
-<img src="pix/mememe05.png" alt="" id="me05" class="incremental" />
-</p>
 </li>
 
 
