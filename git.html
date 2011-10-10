@@ -242,7 +242,7 @@ img#me05 {}
 <li class="slide">
 <h1>Git Started: git init</h1>
 <h2 align="center">git init - creates a new repository</h2>
-<div align="center"><img src="img/init.png"></div>
+<div align="center"><img src="img/git-init.png"></div>
 </li>
 
 <li class="slide">
@@ -255,65 +255,179 @@ img#me05 {}
 <li>object database</li>
 <li>references</li>
 </ul>
+<p align="center" style="margin-top:100px;color:#eee;">cat ~/.gitconfig</p>
 </li>
 
+
 <li class="slide">
-<h1>some title</h1>
+<h1>git hooks</h1>
 <ul>
-<li></li>
-<li></li>
-<li></li>
-<li></li>
+<li class="incremental">run scripts before and after commands</li>
+<li class="incremental">pre: spell check, jslint, run autotests</li>
+<li class="incremental">post: notifications, kick off build scripts</li>
+<li class="incremental">can be local or remote!</li>
+<li class="incremental">commit, rebase, fetch, pull, push, etc.</li>
+</ul>
+</li>
+<li class="slide">
+<h1>git local hooks</h1>
+<ul>
+<li class="incremental">pre-commit: error checking</li>
+<li class="incremental">post-commit: notifications</li>
+<li class="incremental">pre- and post-rebase</li>
+<li class="incremental">post-checkout</li>
+<li class="incremental">post-merge</li>
+</ul>
+</li>
+<li class="slide">
+<h1>git remote hooks</h1>
+<ul>
+<li class="incremental">pre-receive: validation before accepting push</li>
+<li class="incremental">post-receive: notifications, triggering build scripts, etc.</li>
+<li class="incremental">update: same as pre-receive but run once per branch</li>
+<li class="incremental">tip: use client hooks to warn users about server hooks gotchas</li>
 </ul>
 </li>
 
-<li class="slide">
-<h1>Git Started: git clone</h1>
-<ul>
-<li></li>
-<li></li>
-<li></li>
-<li></li>
-</ul>
-</li>
+
 
 <li class="slide">
 <h1>Git Started: add files</h1>
+<div align="center" style="margin-top:30px;"><img src="img/git-add.png"/></div>
+</li>
+<li class="slide">
+<h1>Git Started: add interactive</h1>
 <ul>
-<li></li>
-<li></li>
-<li></li>
-<li></li>
+<li>individually choose which tracked files to stage</li>
+<li>choose which untracked files to stage</li>
+<li>stage "hunks" of files</li>
 </ul>
 </li>
 
+
 <li class="slide">
-<h1>some title</h1>
-<ul>
-<li></li>
-<li></li>
-<li></li>
-<li></li>
-</ul>
+<h1>Git Started: commit</h1>
+<div align="center"><img src="img/git-commit.png" style="margin-top:30px;"></div>
 </li>
 
 <li class="slide">
 <h1>Git Started: commit</h1>
+<img src="img/commit.png" style="float:right; margin:40px 40px 0 0;">
 <ul>
-<li></li>
-<li></li>
-<li></li>
-<li></li>
+<li>create new commit object</li>
+<li class="incremental">pointer to content that was staged</li>
+<li class="incremental">pointer to parent(s)</li>
+<li class="incremental">commit metadata</li>
+</ul>
+<p style="color:#f3f3f3; margin-top:100px;" align="center">git commit -am "message"</p>
+</li>
+
+
+<!--  git branch and git checkout  -->
+<li class="slide">
+<h1>Git Commands: git branch &amp; git checkout</h1>
+<h2 align="center" style="margin-top:200px;">git branches</h2>
+</li>
+<li class="slide">
+<h1>Git Commands: git branch</h1>
+<img src="img/branch1.png" style="float:right;">
+<ul>
+<li>each branch points to a commit</li>
 </ul>
 </li>
 
 <li class="slide">
-<h1>Collaboration in Subversion</h1>
+<h1>Git Commands: git branch</h1>
+<img src="img/branch2.png" style="float:right;">
 <ul>
-<li></li>
-<li></li>
-<li></li>
-<li></li>
+<li>each branch points to a commit</li>
+<li>create branch: <nobr><em>git branch dev</em></nobr></li>
+</ul>
+</li>
+
+<li class="slide">
+<h1>Git Commands: HEAD</h1>
+<img src="img/HEAD.png" style="float:right;">
+<ul>
+<li>each branch points to a commit</li>
+<li>create branch: <nobr><em>git branch dev</em></nobr></li>
+<li>HEAD points to <em>current branch</em></li>
+</ul>
+</li>
+
+<li class="slide">
+<h1>Git Commands: git checkout</h1>
+<img src="img/checkout.png" style="float:right;">
+<ul>
+<li>git checkout moves HEAD pointer</li>
+<li>very different from <em>svn switch</em>
+</ul>
+</li>
+<li class="slide">
+<h1>Git Commands: git checkout</h1>
+<div align="center"><img src="img/checkout2.png" style="margin-top:10px"></div>
+</ul>
+</li>
+<li class="slide">
+<h1>Git Commands: git checkout</h1>
+<div align="center"><img src="img/checkout3.png" style="margin-top:10px"></div>
+</ul>
+</li>
+<li class="slide">
+<h1>Git Commands: git checkout</h1>
+<h2 align="center" style="margin-top: 100px;"><span style="background-color:#dddd66">git checkout -b dev</span><br />
+		  <br />git branch dev && git checkout dev</h2>
+</li>
+
+
+<!--  git merge and rebase  -->
+<li class="slide">
+<h1>Git Commands: git merge &amp; git rebase</h1>
+<h2 align="center" style="margin-top:200px;">merging and rebasing</h2>
+</li>
+<li class="slide">
+<h1>Git Commands: git merge</h1>
+<div align="center"><img src="img/merge1.png"></div>
+</li>
+<li class="slide">
+<h1>Git Commands: git merge</h1>
+<div align="center"><img src="img/merge2.png"></div>
+</li>
+<li class="slide">
+<h1>Git Commands: git merge</h1>
+<div align="center"><img src="img/merge3.png"></div>
+</li>
+
+<li class="slide">
+<h1>Git Commands: git rebase</h1>
+<ul>
+<li>allows you to write history differently</li>
+<li class="incremental">rebase -i</li>
+<li class="incremental">"cleaner" history</li>
+</ul>
+</li>
+<li class="slide">
+<h1>Git Commands: git rebase</h1>
+<div align="center"><img src="img/rebase1.gif"/></div>
+</li>
+<li class="slide">
+<h1>Git Commands: git rebase</h1>
+<div align="center"><img src="img/rebase2.gif"/></div>
+</li>
+<li class="slide">
+<h1>Git Commands: git rebase vs git merge</h1>
+<div align="center"><img src="img/merge-rebase.png" /></div>
+</li>
+
+<li class="slide">
+<h1>Git Tips: working on branches</h1>
+<ul>
+<li>create branch</li>
+<li>checkout branch (can do both together)</li>
+<li>make changes, save file</li>
+<li>diff or view in browser to see changes</li>
+<li>add, commit on that branch
+<li>merge, rebase or discard
 </ul>
 </li>
 
@@ -356,6 +470,22 @@ img#me05 {}
 </li>
 
 
+<!--  git clone  -->
+<li class="slide">
+<h1>Git Started: git clone</h1>
+<ul>
+<li>create local empty git repo</li>
+<li>fetch existing repository</li>
+<li>merge</li>
+<li>note: "<em>svn checkout</em>" is different</li>
+</ul>
+</li>
+<li class="slide">
+<h1>git clone revisited</h1>
+<div align="center"><img src="img/clone.png" style="margin-top:10px;" /></div>
+</li>
+
+
 <!--  git push  -->
 <li class="slide">
 <h1>Git Commands: git push</h1>
@@ -381,6 +511,7 @@ img#me05 {}
 <li class="slide">
 <h1>Git Commands: git log</h1>
 <h2 align="center" style="margin-top:200px;">git log</h2>
+<div align="center"<img src="img/git-log.png"></div>
 </li>
 
 <li class="slide">
@@ -388,44 +519,43 @@ img#me05 {}
 <h2 align="center">git log -3</h2>
 <div align="center"><img src="img/git-log-1.png" alt="" />
 </li>
-
 <li class="slide">
 <h1>Git Commands: git log</h1>
 <h2 align="center">git log -3</h2>
 <div align="center"><img src="img/git-log-1a.png" alt="" />
 </li>
-
 <li class="slide">
 <h1>Git Commands: git log</h1>
 <h2 align="center">git log -3</h2>
 <div align="center"><img src="img/git-log-1b.png" alt="" />
 </li>
-
 <li class="slide">
 <h1>Git Commands: git log</h1>
 <h2 align="center">git log -3</h2>
 <div align="center"><img src="img/git-log-1c.png" alt="" />
 </li>
-
 <li class="slide">
 <h1>Git Commands: git log</h1>
 <h2 align="center">git log -3</h2>
 <div align="center"><img src="img/git-log-1d.png" alt="" />
 </li>
-
 <li class="slide">
 <h1>Git Commands: git log</h1>
 <h2 align="center">git log -3</h2>
 <div align="center"><img src="img/git-log-1e.png" alt="" />
 </li>
 
+<li class="slide">
+<h1>Git Commands: git log</h1>
+<h2 align="center">git log -p</h2>
+<div align="center"><img src="img/git-log-p.png"></div>
+</li>
 
 <li class="slide">
 <h1>Git Commands: git log</h1>
 <h2 align="center">git log --since=yesterday</h2>
 <div align="center" style="margin-top:12px"><img src="img/git-log-since.png" alt="" />
 </li>
-
 
 <li class="slide">
 <h1>Git Commands: git log</h1>
@@ -447,61 +577,6 @@ img#me05 {}
 
 
 <li class="slide">
-<h1>Git Commands: git branch</h1>
-<ul>
-<li></li>
-<li></li>
-<li></li>
-<li></li>
-</ul>
-</li>
-
-<li class="slide">
-<h1>some title</h1>
-<ul>
-<li></li>
-<li></li>
-<li></li>
-<li></li>
-</ul>
-</li>
-
-<li class="slide">
-<h1>Git Commands: git checkout</h1>
-<ul>
-<li></li>
-<li></li>
-<li></li>
-<li></li>
-</ul>
-</li>
-
-<li class="slide">
-<h1>some title</h1>
-<ul>
-<li></li>
-<li></li>
-<li></li>
-<li></li>
-</ul>
-</li>
-
-
-<li class="slide">
-<h1>Git Commands: git merge</h1>
-<div align="center"><img src="img/merge1.png"></div>
-</li>
-<li class="slide">
-<h1>Git Commands: git merge</h1>
-<div align="center"><img src="img/merge2.png"></div>
-</li>
-<li class="slide">
-<h1>Git Commands: git merge</h1>
-<div align="center"><img src="img/merge3.png"></div>
-</li>
-
-
-<li class="slide">
 <h1>some title</h1>
 <ul>
 <li></li>
@@ -513,11 +588,13 @@ img#me05 {}
 
 <li class="slide">
 <h1>Git Basics: .gitignore</h1>
+<div style="float:right; margin-right: 40px;"><img src="img/gitignore.png"></div>
 <ul>
-<li></li>
-<li></li>
-<li></li>
-<li></li>
+<li class="incremental">text file listing what to ignore</li>
+<li class="incremental">config info</li>
+<li class="incremental">large binaries</li>
+<li class="incremental">logfiles</li>
+<li class="incremental">local files from editors</li>
 </ul>
 </li>
 
@@ -585,33 +662,29 @@ img#me05 {}
 <div align="center"><img src="img/instaweb-options.png"></div>
 </li>
 
+
+<!--  reverting files  -->
 <li class="slide">
-<h1>Git Commands: git reset</h1>
-<ul>
-<li></li>
-<li></li>
-<li></li>
-<li></li>
-</ul>
+<h1>Git Commands: undoing changes</h1>
+<h2 align="center" style="margin-top:100px;">I screwed up a file</h2>
+<h2 class="increment">git checkout -- filename</h2>
+</li>
+<li class="slide">
+<h1>Git Commands: undoing changes</h1>
+<h2 align="center" style="margin-top:100px;">I screwed up many files</h2>
+<h2 class="increment">git checkout -f branchname</h2>
+</li>
+<li class="slide">
+<h1>Git Commands: undoing changes</h1>
+<h2 align="center" style="margin-top:100px;">I screwed up the whole branch</h2>
+<h2 class="increment">git branch -d branchname</h2>
+</li>
+<li class="slide">
+<h1>Git Commands: undoing changes</h1>
+<h2 align="center" style="margin-top:100px;">revert the last commit</h2>
+<h2 class="increment">git revert HEAD</h2>
 </li>
 
-
-<li class="slide">
-<h1>Git Commands: git rebase</h1>
-<ul>
-<li>allows you to write history differently</li>
-<li class="incremental">rebase -i</li>
-<li class="incremental">"cleaner" history</li>
-</ul>
-</li>
-<li class="slide">
-<h1>Git Commands: git rebase</h1>
-<div align="center"><img src="img/rebase1.gif"/></div>
-</li>
-<li class="slide">
-<h1>Git Commands: git rebase</h1>
-<div align="center"><img src="img/rebase2.gif"/></div>
-</li>
 
 
 <li class="slide">
@@ -622,22 +695,10 @@ img#me05 {}
 <li class="slide">
 <h1>Git Commands: git diff</h1>
 <ul>
+<li>without args to see what's changed <em>but not staged</em></li>
+<li>git diff --staged</li>
 <li></li>
 <li></li>
-<li></li>
-<li></li>
-</ul>
-</li>
-
-<li class="slide">
-<h1>Git Tips: working on branches</h1>
-<ul>
-<li>create branch</li>
-<li>checkout branch (can do both together)</li>
-<li>make changes, save file</li>
-<li>diff or view in browser to see changes</li>
-<li>add, commit on that branch
-<li>merge, rebase or discard
 </ul>
 </li>
 
@@ -713,6 +774,28 @@ reload
 </ul>
 </li>
 
+
+<!--  deployment  -->
+<li class="slide">
+<h1>deploying with git</h1>
+<div align="center"><img src="img/deploy1.png" style="margin-top:10px;"></div>
+</li>
+<li class="slide">
+<h1>deploying with git</h1>
+<div align="center"><img src="img/deploy2.png" style="margin-top:10px;"></div>
+</li>
+<li class="slide">
+<h1>deploying with git</h1>
+<div align="center"><img src="img/deploy3.png" style="margin-top:10px;"></div>
+</li>
+<li class="slide">
+<h1>deploying with git</h1>
+<div align="center"><img src="img/deploy4.png" style="margin-top:10px;"></div>
+</li>
+<li class="slide">
+<h1>deploying with git</h1>
+<div align="center"><img src="img/deploy5.png" style="margin-top:10px;"></div>
+</li>
 <li class="slide">
 <h1>deploying with git</h1>
 <ul>
