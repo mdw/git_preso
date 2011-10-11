@@ -615,7 +615,7 @@ img#me05 {}
 
 <li class="slide">
 <h1>Git Commands: git pull</h1>
-<div align="center" style="margin-top:200px">git pull = git fetch + git merge</div>
+<h2 align="center" style="margin-top:200px">git pull = git fetch + git merge</h2>
 </li>
 
 <li class="slide">
@@ -631,12 +631,48 @@ img#me05 {}
 <li class="slide">
 <h1>Git Commands: git ls-files</h1>
 <ul>
-<li></li>
-<li></li>
-<li></li>
-<li></li>
+<li>list staged/unstaged/deleted/unmerged files</li>
+<li class="incremental">matching patterns</li>
+<li class="incremental">per directory basis</li>
+<li class="incremental">using info from <em>index</em></li>
 </ul>
 </li>
+
+
+<!--  git OBJECTS  -->
+<li class="slide">
+<h1>Git internals: objects</h1>
+<div align="center" style="margin-top:10px;"><img src="img/object-store1.png" /></div>
+</li>
+<li class="slide">
+<h1>Git internals: objects</h1>
+<div align="center" style="margin-top:10px;"><img src="img/object-store2.png" /></div>
+</li>
+<li class="slide">
+<h1>Git internals: objects</h1>
+<div align="center" style="margin-top:10px;"><img src="img/object-store3.png" /></div>
+</li>
+<li class="slide">
+<h1>Git internals: objects</h1>
+<div align="center" style="margin-top:10px;"><img src="img/blobs.png" /></div>
+</li>
+<li class="slide">
+<h1>Git internals: objects</h1>
+<div align="center" style="margin-top:10px;"><img src="img/object-store4.png" /></div>
+</li>
+<li class="slide">
+<h1>Git internals: objects</h1>
+<div align="center" style="margin-top:10px;"><img src="img/object-store5.png" /></div>
+</li>
+<li class="slide">
+<h1>Git internals: objects</h1>
+<div align="center" style="margin-top:10px;"><img src="img/commit-object.png" /></div>
+</li>
+<li class="slide">
+<h1>Git internals: objects</h1>
+<div align="center" style="margin-top:10px;"><img src="img/repo.png" /></div>
+</li>
+
 
 <li class="slide">
 <h1>Git Commands: git show</h1>
@@ -663,28 +699,36 @@ img#me05 {}
 <div style="margin-top:15px; margin-bottom:24px; text-align:center;">git instaweb --httpd=#{server_name}</div>
 <div align="center"><img src="img/instaweb-options.png"></div>
 </li>
+<li class="slide">
+<h1>git instaweb</h1>
+<div align="center"><img src="img/instaweb.png"></div>
+</li>
 
 
 <!--  reverting files  -->
 <li class="slide">
 <h1>Git Commands: undoing changes</h1>
 <h2 align="center" style="margin-top:100px;">I screwed up a file</h2>
-<h2 class="increment">git checkout -- filename</h2>
+<br />
+<h2 align="center" class="increment" style="background-color:#ff6">git checkout -- filename</h2>
 </li>
 <li class="slide">
 <h1>Git Commands: undoing changes</h1>
 <h2 align="center" style="margin-top:100px;">I screwed up many files</h2>
-<h2 class="increment">git checkout -f branchname</h2>
+<br />
+<h2 align="center" class="increment" style="background-color:#ff6">git checkout -f branchname</h2>
 </li>
 <li class="slide">
 <h1>Git Commands: undoing changes</h1>
 <h2 align="center" style="margin-top:100px;">I screwed up the whole branch</h2>
-<h2 class="increment">git branch -d branchname</h2>
+<br />
+<h2 align="center" class="increment" style="background-color:#ff6">git branch -d branchname</h2>
 </li>
 <li class="slide">
 <h1>Git Commands: undoing changes</h1>
 <h2 align="center" style="margin-top:100px;">revert the last commit</h2>
-<h2 class="increment">git revert HEAD</h2>
+<br />
+<h2 align="center" class="increment" style="background-color:#ff6">git revert HEAD</h2>
 </li>
 
 
