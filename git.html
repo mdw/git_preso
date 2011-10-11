@@ -59,7 +59,7 @@ img#me05 {}
 <li>aiming for the middle 80%</li>
 <li class="incremental">how it works</li>
 <li class="incremental">live demo</li>
-<li class="incremental"></li>
+<li class="incremental">supporting tools &amp; services</li>
 </ul>
 </li>
 
@@ -73,7 +73,7 @@ img#me05 {}
 
 <li class="slide">
 <h1>Why Version Control?</h1>
-<div style="margin: 100px 400px; font-size: 2.5em;">duh!</div>
+<div style="margin-top:120px; margin-left:420px;font-size: 2.5em;">duh!</div>
 </li>
 
 <li class="slide">
@@ -97,9 +97,7 @@ img#me05 {}
 
 <li class="slide">
 <h1>VCS Types</h1>
-<div align="center">
-	<img src="img/SCM-taxonomy.png"/>
-</div>
+<div align="center"><img src="img/SCM-taxonomy.png"/></div>
 </li>
 
 <li class="slide">
@@ -215,7 +213,8 @@ img#me05 {}
 <h1>Git Started: Installation</h1>
 <ul>
 <li>can download source: git.or.cz</li>
-<li>port install git-core +svn</li>
+<li>http://code.google.com/p/msysgit - installer.exe</li>
+<li>port install git-core +svn (or brew install)</li>
 <li>yum install git-core</li>
 <li>apt-get install git-core</li>
 <li>rpm install git-core</li>
@@ -468,6 +467,30 @@ img#me05 {}
 <h2 align="center">git remote show #{nickname}</h2><br>
 <div align="center"><img src="img/remote-show.png"></div>
 </li>
+<li class="slide">
+<h1>Git Commands: git remote</h1>
+<h2 align="center">git remote rename #{from} #{to}</h2><br>
+<br />
+<h2 align="center">git remote rm #{remote-name}</h2><br>
+</li>
+
+<li class="slide">
+<h1>git clone revisited</h1>
+<div align="center"><img src="img/clone.png" style="margin-top:10px;" /></div>
+</li>
+
+
+<li class="slide">
+<h1>Git Commands: git tag</h1>
+<ul>
+<li>git tag (list current tags)</li>
+<li class="incremental">lightweight vs annotated tags</li>
+<li class="incremental">git tag -a v1.0 -m "tag message"</li>
+<li class="incremental">git show v1.0</li>
+<li class="incremental">git tag -a v1.0 84f70c2</li>
+<li class="incremental">git tag -s and git tag -v</li>
+</ul>
+</li>
 
 
 <!--  git clone  -->
@@ -477,14 +500,9 @@ img#me05 {}
 <li>create local empty git repo</li>
 <li>fetch existing repository</li>
 <li>merge</li>
-<li>note: "<em>svn checkout</em>" is different</li>
+<li class="incremental">note: "<em>svn checkout</em>" is different</li>
 </ul>
 </li>
-<li class="slide">
-<h1>git clone revisited</h1>
-<div align="center"><img src="img/clone.png" style="margin-top:10px;" /></div>
-</li>
-
 
 <!--  git push  -->
 <li class="slide">
@@ -577,20 +595,10 @@ img#me05 {}
 
 
 <li class="slide">
-<h1>some title</h1>
-<ul>
-<li></li>
-<li></li>
-<li></li>
-<li></li>
-</ul>
-</li>
-
-<li class="slide">
 <h1>Git Basics: .gitignore</h1>
 <div style="float:right; margin-right: 40px;"><img src="img/gitignore.png"></div>
 <ul>
-<li class="incremental">text file listing what to ignore</li>
+<li>text file listing what to ignore</li>
 <li class="incremental">config info</li>
 <li class="incremental">large binaries</li>
 <li class="incremental">logfiles</li>
@@ -601,19 +609,15 @@ img#me05 {}
 <li class="slide">
 <h1>Git Commands: git fetch</h1>
 <ul>
-<li></li>
-<li></li>
-<li></li>
-<li></li>
+<li>fetch all info from remote that is not in your local repo</li>
+<li>this does NOT automatically merge</li>
+<li>afterwards you have refs to all remote branches</li>
 </ul>
 </li>
 
 <li class="slide">
 <h1>Git Commands: git pull</h1>
-<ul>
-<li>fetch + merge</li>
-<li></li>
-</ul>
+<div align="center" style="margin-top:200px">git pull = git fetch + git merge</div>
 </li>
 
 <li class="slide">
