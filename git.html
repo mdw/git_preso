@@ -258,39 +258,17 @@ img#me05 {}
 
 
 <li class="slide">
-<h1>git hooks</h1>
+<h1>Git Started: git status</h1>
 <ul>
-<li class="incremental">run scripts before and after commands</li>
-<li class="incremental">pre: spell check, jslint, run autotests</li>
-<li class="incremental">post: notifications, kick off build scripts</li>
-<li class="incremental">can be local or remote!</li>
-<li class="incremental">commit, rebase, fetch, pull, push, etc.</li>
-</ul>
-</li>
-<li class="slide">
-<h1>git local hooks</h1>
-<ul>
-<li class="incremental">pre-commit: error checking</li>
-<li class="incremental">post-commit: notifications</li>
-<li class="incremental">pre- and post-rebase</li>
-<li class="incremental">post-checkout</li>
-<li class="incremental">post-merge</li>
-</ul>
-</li>
-<li class="slide">
-<h1>git remote hooks</h1>
-<ul>
-<li class="incremental">pre-receive: validation before accepting push</li>
-<li class="incremental">post-receive: notifications, triggering build scripts, etc.</li>
-<li class="incremental">update: same as pre-receive but run once per branch</li>
-<li class="incremental">tip: use client hooks to warn users about server hooks gotchas</li>
+<li>which files are not tracked</li>
+<li class="incremental">which tracked files have changed</li>
+<li class="incremental">which files are staged</li>
 </ul>
 </li>
 
 
-
 <li class="slide">
-<h1>Git Started: add files</h1>
+<h1>Git Started: git add</h1>
 <div align="center" style="margin-top:30px;"><img src="img/git-add.png"/></div>
 </li>
 <li class="slide">
@@ -323,9 +301,16 @@ img#me05 {}
 <h1>Git Started: commit (options)</h1>
 <ul>
 <li>commit -am "message" (auto add all)</li>
-<li class="incremental">commit --amend (revise msg for last commit on current branch)</li>
+<li class="incremental">commit --amend (revise msg for last commit current branch)</li>
 <li class="incremental">commit -p (commit hunks)</li>
 </ul>
+</li>
+
+
+<!--  live demo  -->
+<li class="slide">
+<h1>Git Commands: git branch &amp; git checkout</h1>
+<h2 align="center" style="margin-top:200px;">demo - basic commands</h2>
 </li>
 
 
@@ -437,6 +422,18 @@ img#me05 {}
 </ul>
 </li>
 
+<li class="slide">
+<h1>Git Commands: git tag</h1>
+<ul>
+<li>git tag (list current tags)</li>
+<li class="incremental">lightweight vs annotated tags</li>
+<li class="incremental">git tag -a v1.0 -m "tag message"</li>
+<li class="incremental">git show v1.0</li>
+<li class="incremental">git tag -a v1.0 84f70c2</li>
+<li class="incremental">git tag -s and git tag -v</li>
+</ul>
+</li>
+
 
 <!--  git remote  -->
 <li class="slide">
@@ -481,24 +478,11 @@ img#me05 {}
 <h2 align="center">git remote rm #{remote-name}</h2><br>
 </li>
 
-<li class="slide">
-<h1>git clone revisited</h1>
-<div align="center"><img src="img/clone.png" style="margin-top:10px;" /></div>
-</li>
-
 
 <li class="slide">
-<h1>Git Commands: git tag</h1>
-<ul>
-<li>git tag (list current tags)</li>
-<li class="incremental">lightweight vs annotated tags</li>
-<li class="incremental">git tag -a v1.0 -m "tag message"</li>
-<li class="incremental">git show v1.0</li>
-<li class="incremental">git tag -a v1.0 84f70c2</li>
-<li class="incremental">git tag -s and git tag -v</li>
-</ul>
+<h1>Git Commands: git remote</h1>
+<h2 align="center" style="margin-top:200px;">things to do with remotes</h2>
 </li>
-
 
 <!--  git clone  -->
 <li class="slide">
@@ -510,6 +494,12 @@ img#me05 {}
 <li class="incremental">note: "<em>svn checkout</em>" is different</li>
 </ul>
 </li>
+<li class="slide">
+<h1>git clone revisited</h1>
+<div align="center"><img src="img/clone.png" style="margin-top:10px;" /></div>
+</li>
+
+
 
 <!--  git push  -->
 <li class="slide">
@@ -650,6 +640,50 @@ img#me05 {}
 </li>
 
 
+<!--  git hooks  -->
+<li class="slide">
+<h1>.git directory</h1>
+<img style="float:right; margin-right:30px;" src="img/git-init.png">
+<ul>
+<li>config file</li>
+<li><span class="yellow">hooks</span></li>
+<li>index</li>
+<li>object database</li>
+<li>references</li>
+</ul>
+<p align="center" style="margin-top:100px;color:#eee;">cat ~/.gitconfig</p>
+</li>
+<li class="slide">
+<h1>git hooks</h1>
+<ul>
+<li>run scripts before and after commands</li>
+<li class="incremental">pre: spell check, jslint, run autotests</li>
+<li class="incremental">post: notifications, kick off build scripts</li>
+<li class="incremental">can be local or remote!</li>
+<li class="incremental">commit, rebase, fetch, pull, push, etc.</li>
+</ul>
+</li>
+<li class="slide">
+<h1>git local hooks</h1>
+<ul>
+<li>pre-commit: error checking</li>
+<li class="incremental">post-commit: notifications</li>
+<li class="incremental">pre- and post-rebase</li>
+<li class="incremental">post-checkout</li>
+<li class="incremental">post-merge</li>
+</ul>
+</li>
+<li class="slide">
+<h1>git remote hooks</h1>
+<ul>
+<li>pre-receive: validation before accepting push</li>
+<li class="incremental">post-receive: notifications, triggering build scripts, etc.</li>
+<li class="incremental">update: same as pre-receive but run once per branch</li>
+<li class="incremental">tip: use client hooks to warn users about server hooks gotchas</li>
+</ul>
+</li>
+
+
 <!--  git OBJECTS  -->
 <li class="slide">
 <h1>.git directory</h1>
@@ -661,7 +695,6 @@ img#me05 {}
 <li><span class="yellow">object database</span></li>
 <li>references</li>
 </ul>
-<p align="center" style="margin-top:100px;color:#eee;">cat ~/.gitconfig</p>
 </li>
 
 <li class="slide">
@@ -708,48 +741,32 @@ img#me05 {}
 </li>
 
 
-<li class="slide">
-<h1>gitk</h1>
-<div align="center" style="margin-top:10px;"><img src="img/gitk.png"></div>
-</li>
-
-
-<li class="slide">
-<h1>git instaweb</h1>
-<div style="margin-top:15px; margin-bottom:24px; text-align:center;">git instaweb --httpd=#{server_name}</div>
-<div align="center"><img src="img/instaweb-options.png"></div>
-</li>
-<li class="slide">
-<h1>git instaweb</h1>
-<div align="center"><img src="img/instaweb.png"></div>
-</li>
-
-
 <!--  reverting files  -->
 <li class="slide">
 <h1>Git Commands: undoing changes</h1>
 <h2 align="center" style="margin-top:100px;">I screwed up a file</h2>
 <br />
-<h2 align="center" class="increment" style="background-color:#ff6">git checkout -- filename</h2>
+<h2 align="center" class="increment"><span class="yellow">git checkout -- filename</span></h2>
 </li>
 <li class="slide">
 <h1>Git Commands: undoing changes</h1>
 <h2 align="center" style="margin-top:100px;">I screwed up many files</h2>
 <br />
-<h2 align="center" class="increment" style="background-color:#ff6">git checkout -f branchname</h2>
+<h2 align="center" class="increment"><span class="yellow">git checkout -f branchname</span></h2>
 </li>
 <li class="slide">
 <h1>Git Commands: undoing changes</h1>
 <h2 align="center" style="margin-top:100px;">I screwed up the whole branch</h2>
 <br />
-<h2 align="center" class="increment" style="background-color:#ff6">git branch -d branchname</h2>
+<h2 align="center" class="increment"><span class="yellow">git branch -d branchname</span></h2>
 </li>
 <li class="slide">
 <h1>Git Commands: undoing changes</h1>
 <h2 align="center" style="margin-top:100px;">revert the last commit</h2>
 <br />
-<h2 align="center" class="increment" style="background-color:#ff6">git revert HEAD</h2>
+<h2 align="center" class="increment"><span class="yellow">git revert HEAD</span></h2>
 </li>
+
 
 
 
@@ -760,10 +777,7 @@ img#me05 {}
 
 <li class="slide">
 <h1>Git Commands: git diff</h1>
-<ul>
-<li>without args to see what's changed <em>but not staged</em></li>
-<li>git diff --staged</li>
-</ul>
+<div align="center" style="margin-top:10px;"><img src="img/diff-anim.gif"></div>
 </li>
 
 
@@ -784,6 +798,44 @@ img#me05 {}
 <li>s - split it up into smaller pieces!</li>
 </ul>
 </li>
+
+
+<!--  some useful tools  -->
+<li class="slide">
+<h1>Git Utilities</h1>
+<h2 align="center" style="margin-top: 200px">git utilities</h2>
+</li>
+
+<li class="slide">
+<h1>Git Utilities</h1>
+<h2 align="center" style="margin-top:200px;">git-svn</h2>
+</li>
+
+<li class="slide">
+<h1>gitk</h1>
+<div align="center" style="margin-top:10px;"><img src="img/gitk.png"></div>
+</li>
+
+<li class="slide">
+<h1>git instaweb</h1>
+<div style="margin-top:15px; margin-bottom:24px; text-align:center;">git instaweb --httpd=#{server_name}</div>
+<div align="center"><img src="img/instaweb-options.png"></div>
+</li>
+<li class="slide">
+<h1>git instaweb</h1>
+<div align="center"><img src="img/instaweb.png"></div>
+</li>
+
+<li class="slide">
+<h1>Git Tips: git GUIs</h1>
+<ul>
+<li>tortoise git/windows, Git Cola</li>
+<li>tower/Mac - beauty</li>
+<li>smartgit - Mac, Windows, Linux</li>
+<li>plugins for eclipse, others</li>
+</ul>
+</li>
+
 
 
 <!--  collaboration - slides from Scott Chacon  -->
@@ -821,7 +873,6 @@ img#me05 {}
 </li>
 
 
-
 <li class="slide">
 <h1>Git Tips: protocols</h1>
 <ul>
@@ -833,15 +884,6 @@ img#me05 {}
 </ul>
 </li>
 
-<li class="slide">
-<h1>Git Tips: tracking branches</h1>
-<ul>
-<li></li>
-<li></li>
-<li></li>
-<li></li>
-</ul>
-</li>
 
 <li class="slide">
 <h1>Git Commands Revisited</h1>
@@ -889,24 +931,15 @@ img#me05 {}
 <ul>
 <li>supported by capistrano, fabric</li>
 <li>heroku</li>
-<li></li>
+<li>others?</li>
 </ul>
 </li>
 
-
-<li class="slide">
-<h1>Git Tips: git GUIs</h1>
-<ul>
-<li>tortoise git/windows, Git Cola</li>
-<li>tower/Mac - beauty</li>
-<li>smartgit - Mac, Windows, Linux</li>
-<li>plugins for eclipse, others</li>
-</ul>
-</li>
 
 
 <li class="slide">
 <h1>hosted repos for Git</h1>
+<img src="img/github.png" class="github" style="float:right; margin:70px 90px 0 0;">
 <ul>
 <li>Github</li>
 <li>unfuddle, gitorious, beanstalk, bitbucket</li>
@@ -914,22 +947,22 @@ img#me05 {}
 </ul>
 </li>
 
-<li class="slide">
-<h1>Hosted Git</h1>
-<img src="img/github.png" class="github" style="float:right; margin:70px 90px 0 0;">
-</li>
-
 
 <li class="slide">
 <h1>resources</h1>
 <ul>
-<li>git.or.cz</li>
+<li>https://github.com/mdw/git_preso - these slides</li>
 <li>git-scm.org</li>
 <li>http://blip.tv/scott-chacon/</li>
 <li>http://ProGit.org/book</li>
 <li>#git , #github</li>
 <li>gitref.org</li>
 </ul>
+</li>
+
+<li class="slide">
+<h1>The End</h1>
+<h2 align="center" style="margin-top:200px;">Thanks!</h2>
 </li>
 
 
