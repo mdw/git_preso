@@ -23,6 +23,7 @@ img#me02 {}
 img#me04 {}
 img#me05 {}
 .red { color:#f22; }
+.yellow { background-color:#ff6; }
 </style>
 <script src="ui/default/slides.js" type="text/javascript"></script>
 </head>
@@ -53,6 +54,7 @@ img#me05 {}
 
 <li class="slide">
 <h1>My Comments</h1>
+<img src="img/finalGIT.png" class="gitlogo" style="float:right; margin:70px 90px 0 0;">
 <ul>
 <li>aiming for the middle 80%</li>
 <li class="incremental">how it works</li>
@@ -63,9 +65,8 @@ img#me05 {}
 
 <li class="slide">
 <h1>What Is Source Control Management?</h1>
-<ul>
 <h2 align="center" style="margin-top:100px;">save snapshots of your project</h2>
-</ul>
+<div align="center" style="margin-top: 100px"><img src="img/git-logo-cool.png"></div>
 </li>
 
 
@@ -77,7 +78,7 @@ img#me05 {}
 <li class="slide">
 <h1>Why VCS?</h1>
 <ul>
-<li class="incremental">accidents can be fixed</li>
+<li>accidents can be fixed</li>
 <li class="incremental">collaborate: people can work on same files</li>
 <li class="incremental">never again need to see index.php~</li>
 <li class="incremental">be <em>professional</em>
@@ -87,7 +88,7 @@ img#me05 {}
 <li class="slide">
 <h1>You don't need to be an expert!</h1>
 <ul>
-<li class="incremental">only use need a dozen commands to start</li>
+<li>only use need a dozen commands to start</li>
 <li class="incremental">never need to know internals</li>
 <li class="incremental">branching/merging is easy!</li>
 </ul>
@@ -316,7 +317,15 @@ img#me05 {}
 <li class="incremental">pointer to parent(s)</li>
 <li class="incremental">commit metadata</li>
 </ul>
-<p style="color:#f3f3f3; margin-top:100px;" align="center">git commit -am "message"</p>
+
+</li>
+<li class="slide">
+<h1>Git Started: commit (options)</h1>
+<ul>
+<li>commit -am "message" (auto add all)</li>
+<li class="incremental">commit --amend (revise msg for last commit on current branch)</li>
+<li class="incremental">commit -p (commit hunks)</li>
+</ul>
 </li>
 
 
@@ -597,10 +606,11 @@ img#me05 {}
 <div style="float:right; margin-right: 40px;"><img src="img/gitignore.png"></div>
 <ul>
 <li>text file listing what to ignore</li>
-<li class="incremental">config info</li>
-<li class="incremental">large binaries</li>
-<li class="incremental">logfiles</li>
-<li class="incremental">local files from editors</li>
+<li class="incremental">config info, large binaries, logfiles</li>
+<li class="incremental">sitewide, but can be overridden per dir</li>
+<li class="incremental">.project</li>
+<li class="incremental">*.swp</li>
+<li class="incremental">tmp/**/*</li>
 </ul>
 </li>
 
@@ -635,11 +645,25 @@ img#me05 {}
 <li class="incremental">matching patterns</li>
 <li class="incremental">per directory basis</li>
 <li class="incremental">using info from <em>index</em></li>
+<li class="incremental">ls-remote</li>
 </ul>
 </li>
 
 
 <!--  git OBJECTS  -->
+<li class="slide">
+<h1>.git directory</h1>
+<img style="float:right; margin-right:30px;" src="img/git-init.png">
+<ul>
+<li>config file</li>
+<li>hooks</li>
+<li>index</li>
+<li><span class="yellow">object database</span></li>
+<li>references</li>
+</ul>
+<p align="center" style="margin-top:100px;color:#eee;">cat ~/.gitconfig</p>
+</li>
+
 <li class="slide">
 <h1>Git internals: objects</h1>
 <div align="center" style="margin-top:10px;"><img src="img/object-store1.png" /></div>
@@ -672,27 +696,23 @@ img#me05 {}
 <h1>Git internals: objects</h1>
 <div align="center" style="margin-top:10px;"><img src="img/repo.png" /></div>
 </li>
+<li class="slide">
+<h1>Git internals: objects</h1>
+<div align="center" style="margin-top:10px;"><img src="img/repo2.png" /></div>
+</li>
 
 
 <li class="slide">
 <h1>Git Commands: git show</h1>
-<ul>
-<li></li>
-<li></li>
-<li></li>
-<li></li>
-</ul>
+<h2 align="center" style="margin-top: 200px">used to show objects (blobs, trees, tags and commits)</h2>
 </li>
+
 
 <li class="slide">
 <h1>gitk</h1>
-<ul>
-<li></li>
-<li></li>
-<li></li>
-<li></li>
-</ul>
+<div align="center" style="margin-top:10px;"><img src="img/gitk.png"></div>
 </li>
+
 
 <li class="slide">
 <h1>git instaweb</h1>
@@ -743,23 +763,9 @@ img#me05 {}
 <ul>
 <li>without args to see what's changed <em>but not staged</em></li>
 <li>git diff --staged</li>
-<li></li>
-<li></li>
 </ul>
 </li>
 
-<!-- 
-demo: 
-create branch
-switch to new branch
-edit file to change something obvious
-git diff and reload page in browser
-git add, commit
-change back to master
-reload in browser
-git merge
-reload
--->
 
 <li class="slide">
 <h1>Git Tips: git add -i</h1>
@@ -767,17 +773,63 @@ reload
 <li>choose modified files to stage</li>
 <li>choose untracked files to stage</li>
 <li>choose chunks of code to stage</li>
-<li></li>
 </ul>
 </li>
 
 <li class="slide">
-<h1>Collaboration in Git</h1>
+<h1>Git Tips: git add -p</h1>
 <ul>
-<li></li>
-<li></li>
-<li></li>
-<li></li>
+<li>stage "hunks" of files</li>
+<li>for each hunk, choices include y, n, a, d, e (edit)</li>
+<li>s - split it up into smaller pieces!</li>
+</ul>
+</li>
+
+
+<!--  collaboration - slides from Scott Chacon  -->
+<li class="slide">
+<h1>Collaboration in Git</h1>
+<div align="center" style="margin-top:40px;"><img src="img/centralized-workflow.png"></div>
+</li>
+<li class="slide">
+<h1>Collaboration in Git</h1>
+<div align="center" style="margin-top:10px;"><img src="img/collab1.png"></div>
+</li>
+<li class="slide">
+<h1>Collaboration in Git</h1>
+<div align="center" style="margin-top:10px;"><img src="img/collab2.png"></div>
+</li>
+<li class="slide">
+<h1>Collaboration in Git</h1>
+<div align="center" style="margin-top:10px;"><img src="img/collab3.png"></div>
+</li>
+<li class="slide">
+<h1>Collaboration in Git</h1>
+<div align="center" style="margin-top:10px;"><img src="img/collab4.png"></div>
+</li>
+<li class="slide">
+<h1>Collaboration in Git</h1>
+<div align="center" style="margin-top:10px;"><img src="img/collab5.png"></div>
+</li>
+<li class="slide">
+<h1>Collaboration in Git</h1>
+<div align="center" style="margin-top:10px;"><img src="img/collab6.png"></div>
+</li>
+<li class="slide">
+<h1>Collaboration in Git</h1>
+<div align="center" style="margin-top:10px;"><img src="img/dictator-workflow.png"></div>
+</li>
+
+
+
+<li class="slide">
+<h1>Git Tips: protocols</h1>
+<ul>
+<li>file://</li>
+<li>ssh://</li>
+<li>http(s)://</li>
+<li>git://</li>
+<li>rsync://</li>
 </ul>
 </li>
 
@@ -811,16 +863,6 @@ reload
 
 
 
-<li class="slide">
-<h1>hosted repos for Git</h1>
-<ul>
-<li>Github</li>
-<li>unfuddle, gitorious, beanstalk, bitbucket</li>
-<li>roll your own</li>
-</ul>
-</li>
-
-
 <!--  deployment  -->
 <li class="slide">
 <h1>deploying with git</h1>
@@ -851,15 +893,32 @@ reload
 </ul>
 </li>
 
+
 <li class="slide">
 <h1>Git Tips: git GUIs</h1>
 <ul>
-<li></li>
-<li></li>
-<li></li>
-<li></li>
+<li>tortoise git/windows, Git Cola</li>
+<li>tower/Mac - beauty</li>
+<li>smartgit - Mac, Windows, Linux</li>
+<li>plugins for eclipse, others</li>
 </ul>
 </li>
+
+
+<li class="slide">
+<h1>hosted repos for Git</h1>
+<ul>
+<li>Github</li>
+<li>unfuddle, gitorious, beanstalk, bitbucket</li>
+<li>roll your own</li>
+</ul>
+</li>
+
+<li class="slide">
+<h1>Hosted Git</h1>
+<img src="img/github.png" class="github" style="float:right; margin:70px 90px 0 0;">
+</li>
+
 
 <li class="slide">
 <h1>resources</h1>

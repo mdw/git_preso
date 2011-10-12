@@ -1,4 +1,22 @@
-Git preso for teh South Florida PHP Group Oct 12, 2011
+Git preso for the South Florida PHP Group Oct 12, 2011
 
-covering the basics, and doind a very simple live demo to support the basic ideas
+Covering the basics, and doing a very simple live demo to support the basic ideas. 
+Heavily influenced by several presos and videos from Scott Chacon.
+
+Topics include:
+1. overview of VCS
+2. centralized vs distributed
+3. Delta storage vs DAGs
+4. Three buckets (object store, index, working dir)
+5. Basic commands (init, add, commit, remote, push, fetch, pull)
+6. Branches and checkout
+7. Merge and rebase
+8. more commands (clone, tag, git log, stash)
+9. objects
+10. supporting tools (gitk, instaweb)
+11. undoing changes
+12. add -i and add -p
+13. workflows
+14. deploying with git
+15. github
 
